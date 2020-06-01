@@ -18,36 +18,46 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnStart3"
+        android:id="@+id/btnStartAlpha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Alpha"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnStart2"
+        app:layout_constraintStart_toEndOf="@+id/btnStartScale"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnStart2"
+        android:id="@+id/btnStartScale"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="scale"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnStart3"
+        app:layout_constraintEnd_toStartOf="@+id/btnStartAlpha"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnStart"
+        app:layout_constraintStart_toEndOf="@+id/btnStartTranslate"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnStart"
+        android:id="@+id/btnStartTranslate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Translate"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnStart2"
+        app:layout_constraintEnd_toStartOf="@+id/btnStartScale"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnStartRotation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rotation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStartTranslate" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

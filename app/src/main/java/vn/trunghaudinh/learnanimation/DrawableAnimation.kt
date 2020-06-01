@@ -17,7 +17,7 @@ class DrawableAnimation : AppCompatActivity() {
 
         animation = imvDoraemon.background as AnimationDrawable?
 
-        btnStart.setOnClickListener {
+        btnStartTranslate.setOnClickListener {
             if (animation?.isRunning!!){
                 animation?.stop()
             }else{
