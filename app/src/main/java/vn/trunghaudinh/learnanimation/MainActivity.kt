@@ -18,5 +18,9 @@ class MainActivity : AppCompatActivity() {
         btnTween.setOnClickListener {
             startActivity(Intent(this,TweenAnimation::class.java))
         }
+
+        btnMotionLayout.setOnClickListener {
+            startActivity(Intent(this,MotionActivity::class.java))
+        }
     }
 }

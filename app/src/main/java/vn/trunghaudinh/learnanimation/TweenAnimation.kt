@@ -57,7 +57,7 @@ class TweenAnimation : AppCompatActivity() {
         }
 
         btnStartRotation.setOnClickListener {
-            view1.startAnimation(animationRotation)
+            view1.startAnimation(animationScale)
         }
 
         btnStartAlpha.setOnClickListener {

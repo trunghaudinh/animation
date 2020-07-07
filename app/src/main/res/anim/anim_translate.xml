@@ -11,11 +11,11 @@
 <!--        android:interpolator="@android:anim/linear_interpolator"/>-->
 
     <translate
-        android:duration="5000"
+        android:duration="2000"
         android:fromXDelta="0%p"
         android:fromYDelta="0%p"
-        android:interpolator="@android:anim/linear_interpolator"
+        android:interpolator="@android:anim/bounce_interpolator"
         android:toXDelta="0"
-        android:toYDelta="600" />
+        android:toYDelta="300" />
 
 </set>
