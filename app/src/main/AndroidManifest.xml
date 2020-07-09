@@ -9,9 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MotionActivity"/>
-        <activity android:name=".DrawableAnimation" />
-        <activity android:name=".TweenAnimation" />
+        <activity android:name=".motionlayout.ReadBookActivity"></activity>
+        <activity android:name=".motionlayout.Example1Activity" />
+        <activity android:name=".motionlayout.MotionActivity" />
+        <activity android:name=".animation.DrawableAnimation" />
+        <activity android:name=".animation.TweenAnimation" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

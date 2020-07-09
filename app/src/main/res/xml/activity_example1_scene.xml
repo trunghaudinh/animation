@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:touchAnchorId="@id/view2"
+            motion:touchAnchorSide="top" />
+        <KeyFrameSet></KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/viewCenter"
+            motion:layout_constraintEnd_toEndOf="@+id/viewCenter"
+            motion:layout_constraintStart_toStartOf="@+id/viewCenter"
+            motion:layout_constraintTop_toTopOf="@+id/viewCenter">
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="#040404" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/guideMid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintGuide_percent="0.5" />
+        <Constraint
+            android:id="@+id/circleImage"
+            android:layout_width="430dp"
+            android:layout_height="430dp"
+            motion:layout_constraintStart_toStartOf="@id/guideCircle"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/imgMain"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            motion:layout_constraintBottom_toBottomOf="@id/guideMid"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/img1"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/imgMain"
+            motion:layout_constraintEnd_toStartOf="@+id/imgMain"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintTop_toTopOf="@+id/imgMain" />
+        <Constraint
+            android:id="@+id/img2"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/imgMain"
+            motion:layout_constraintRight_toRightOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/imgMain"
+            motion:layout_constraintTop_toTopOf="@+id/imgMain" />
+        <Constraint
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="@+id/viewCenter"
+            motion:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="#fff" />
+        </Constraint>
+    </ConstraintSet>
+</MotionScene>

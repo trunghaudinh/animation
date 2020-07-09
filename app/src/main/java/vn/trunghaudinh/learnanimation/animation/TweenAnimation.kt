@@ -1,12 +1,12 @@
-package vn.trunghaudinh.learnanimation
+package vn.trunghaudinh.learnanimation.animation
 
 import android.animation.ObjectAnimator
 import android.os.Bundle
 import android.view.animation.*
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
 import kotlinx.android.synthetic.main.activity_tween_animation.*
+import vn.trunghaudinh.learnanimation.R
 
 class TweenAnimation : AppCompatActivity() {
 
@@ -19,10 +19,18 @@ class TweenAnimation : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tween_animation)
 
-        animationTranslate = AnimationUtils.loadAnimation(this, R.anim.anim_translate)
-        animationScale = AnimationUtils.loadAnimation(this, R.anim.anim_scale)
-        animationRotation = AnimationUtils.loadAnimation(this, R.anim.anim_rotation)
-        animationAlpha = AnimationUtils.loadAnimation(this, R.anim.anim_alpha)
+        animationTranslate = AnimationUtils.loadAnimation(this,
+            R.anim.anim_translate
+        )
+        animationScale = AnimationUtils.loadAnimation(this,
+            R.anim.anim_scale
+        )
+        animationRotation = AnimationUtils.loadAnimation(this,
+            R.anim.anim_rotation
+        )
+        animationAlpha = AnimationUtils.loadAnimation(this,
+            R.anim.anim_alpha
+        )
 
 
         btnStartTranslate.setOnClickListener {

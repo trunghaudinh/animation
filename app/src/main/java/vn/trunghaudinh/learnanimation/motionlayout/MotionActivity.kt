@@ -1,8 +1,11 @@
-package vn.trunghaudinh.learnanimation
+package vn.trunghaudinh.learnanimation.motionlayout
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_motion.*
+import vn.trunghaudinh.learnanimation.R
 
 
 class MotionActivity : AppCompatActivity() {
@@ -14,8 +17,15 @@ class MotionActivity : AppCompatActivity() {
         )
         setContentView(R.layout.activity_motion)
 
-//        view.setOnClickListener {
-//            Toast.makeText(this,"Start",Toast.LENGTH_LONG).show()
-//        }
+
+        btn1.setOnClickListener {
+            startActivity(Intent(this,Example1Activity::class.java))
+        }
+
+        btn2.setOnClickListener {
+            startActivity(Intent(this,ReadBookActivity::class.java))
+        }
+
+
     }
 }
