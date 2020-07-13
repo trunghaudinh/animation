@@ -21,9 +21,6 @@ class WriteActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_write)
 
-        val transitionRightHand = motionMain.getTransition(R.id.transitionRightHand)
-        val transitionLeftHand = motionMain.getTransition(R.id.transitionLeftHand)
-        val transitionWriteText = motionMain.getTransition(R.id.transitionWriteText)
 
         motionMain.setTransition(R.id.start2,R.id.enddd)
         motionMain.transitionToEnd()

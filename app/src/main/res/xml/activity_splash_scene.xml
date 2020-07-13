@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        android:id="@+id/transitionStart"
+        motion:constraintSetEnd="@+id/endSplash"
+        motion:constraintSetStart="@id/startSplash"
+        motion:duration="1000">
+    </Transition>
+
+    <ConstraintSet android:id="@+id/startSplash">
+        <Constraint
+            android:id="@+id/imagePen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toBottomOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/endSplash">
+        <Constraint
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/imageText"
+            motion:layout_constraintStart_toStartOf="@+id/imageText" />
+    </ConstraintSet>
+
+    //////
+    <ConstraintSet android:id="@+id/writeText">
+        <Constraint
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/imageText"
+            motion:layout_constraintStart_toEndOf="@+id/imageText" />
+        <Constraint
+            android:id="@+id/imageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:alpha="1"
+            motion:layout_constraintEnd_toEndOf="@+id/imageSplash"
+            motion:layout_constraintStart_toStartOf="@+id/imageSplash"
+            motion:layout_constraintTop_toBottomOf="@+id/imageSplash"/>
+    </ConstraintSet>
+    <Transition
+        android:id="@+id/transitionWrite"
+        motion:constraintSetEnd="@+id/writeText"
+        motion:constraintSetStart="@+id/endSplash"
+        motion:duration="1000">
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="1"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/imageText" />
+            <KeyAttribute
+                android:translationY="10dp"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/imageView4" />
+            <KeyAttribute
+                android:translationY="0dp"
+                motion:framePosition="10"
+                motion:motionTarget="@+id/imageView4" />
+            <KeyAttribute
+                android:translationY="10dp"
+                motion:framePosition="20"
+                motion:motionTarget="@+id/imageView4" />
+            <KeyAttribute
+                android:translationY="0dp"
+                motion:framePosition="30"
+                motion:motionTarget="@+id/imageView4" />
+            <KeyAttribute
+                android:translationY="10dp"
+                motion:framePosition="40"
+                motion:motionTarget="@+id/imageView4" />
+            <KeyAttribute
+                android:translationY="0dp"
+                motion:framePosition="50"
+                motion:motionTarget="@+id/imageView4" />
+            <KeyAttribute
+                android:translationY="10dp"
+                motion:framePosition="60"
+                motion:motionTarget="@+id/imageView4" />
+            <KeyAttribute
+                android:translationY="0dp"
+                motion:framePosition="70"
+                motion:motionTarget="@+id/imageView4" />
+            <KeyAttribute
+                android:translationY="10dp"
+                motion:framePosition="80"
+                motion:motionTarget="@+id/imageView4" />
+            <KeyAttribute
+                android:translationY="0dp"
+                motion:framePosition="90"
+                motion:motionTarget="@+id/imageView4" />
+            <KeyAttribute
+                android:translationY="10dp"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/imageView4" />
+        </KeyFrameSet>
+    </Transition>
+    <ConstraintSet android:id="@+id/centerPen">
+        <Constraint
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="70dp"
+            motion:layout_constraintEnd_toEndOf="@+id/imageSplash"
+            motion:layout_constraintStart_toStartOf="@+id/imageSplash"
+            motion:layout_constraintTop_toTopOf="@+id/imageSplash" />
+        <Constraint
+            android:id="@+id/imageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:alpha="1"
+            motion:layout_constraintEnd_toEndOf="@+id/imageSplash"
+            motion:layout_constraintStart_toStartOf="@+id/imageSplash"
+            motion:layout_constraintTop_toBottomOf="@+id/imageSplash" />
+    </ConstraintSet>
+    <Transition
+        android:id="@+id/transitionEnd"
+        motion:constraintSetEnd="@+id/centerPen"
+        motion:constraintSetStart="@+id/writeText"
+        motion:duration="1000">
+        <KeyFrameSet>
+            <KeyPosition
+                motion:framePosition="50"
+                motion:keyPositionType="parentRelative"
+                motion:motionTarget="@+id/imageView4"
+                motion:percentX="1.1" />
+        </KeyFrameSet>
+    </Transition>
+</MotionScene>

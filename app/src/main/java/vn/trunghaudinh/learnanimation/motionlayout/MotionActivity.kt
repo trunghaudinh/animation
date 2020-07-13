@@ -30,6 +30,10 @@ class MotionActivity : AppCompatActivity() {
             startActivity(Intent(this,WriteActivity::class.java))
         }
 
+        btn4.setOnClickListener {
+            startActivity(Intent(this,SplashActivity::class.java))
+        }
+
 
     }
 }
