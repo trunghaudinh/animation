@@ -26,6 +26,10 @@ class MotionActivity : AppCompatActivity() {
             startActivity(Intent(this,ReadBookActivity::class.java))
         }
 
+        btn3.setOnClickListener {
+            startActivity(Intent(this,WriteActivity::class.java))
+        }
+
 
     }
 }
